@@ -1,0 +1,82 @@
+NOTES
+	need a way to 
+
+
+PAGES
+	Dashboard
+	New Person
+		event registration
+	New Event
+		add options
+	Settings
+		Manage conferences
+			default place
+			attendee options
+		Manage places
+		Manage users
+	Event Registration
+		add new attendees
+		export
+		paid/due report
+
+
+PHASE II
+	time/date ranges for conferences
+	track communication
+	track attendance 
+	event reg reports by place or date or time
+	mass registration
+	sharepoint integration
+		email notification
+
+PHASE III
+	online self-registration
+	taking payments
+		Touchnet integration
+		Paypal integration
+
+
+
+DATABASE SCHEMA
+	ATTENDEES
+		Attendee_ID (pk)
+		First
+		Last
+
+	CONFERENCE
+		Conference_ID (pk)
+		Conference_Name
+		Default_place
+		Table_prefix (for referencing registration and attendee option tables)
+
+	CONFERENCE_OPTIONS
+		Conference_ID (pk, fk)
+		Option_column_name (pk)
+		Option_name
+
+	EVENTS
+		Event_ID (pk)
+		Event_name
+		Cost
+		Time
+		Date
+		Place (fk)
+
+	PLACES
+		Place_ID (pk)
+		Place_name
+
+	HOMECOMING13_REGISTRATION (create a new one of these for each conference)
+		Event_ID (pk, fk)
+		Attendee_ID (pk, fk)
+		Amt_Paid
+		Meal_Choice (event opt)
+		... (other event opt as required)
+
+	HOMECOMING13_ATTENDEE_OPTIONS (create a new one of these for each conference, schema will vary as necessary)
+		Attendee_ID (pk, fk)
+		Maiden_name
+		Class_yr
+		Guest_of (fk)
+		Group_with (fk)
+		Parking_needs

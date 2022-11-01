@@ -1,0 +1,22 @@
+GENERAL
+-----------------------------------------
+This was an interesting idea to build something that helped create seating
+charts for conferences. I never really finished it or got to a MVP
+
+TODO
+-----------------------------------------
+
+SHELL.PHP
+	function to highlight nav
+	move nav to sidebar
+	fallback for curent_conf cookie not set
+
+INDEX.PHP
+	get title of current conference from db 
+		this should probably be a function of shell.php?
+	everything's a big blue link. reorder, beautify
+	generate sample list of events automatically
+	cookie is currently set manually
+
+EVENTS.PHP
+	join in place name into event details
